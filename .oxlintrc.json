@@ -1,0 +1,38 @@
+{
+    "plugins": [
+        "import",
+        "typescript"
+    ],
+    "env": {
+        "node": true
+    },
+    "globals": {
+        "process": "readonly"
+    },
+    "categories": {
+        "correctness": "error",
+        "suspicious": "warn"
+    },
+    "rules": {
+        "eqeqeq": "warn",
+        "no-console": "warn",
+        "import/no-unused-modules": "error",
+        "typescript/no-explicit-any": "warn"
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.test.ts",
+                "**/*.spec.ts"
+            ],
+            "rules": {
+                "typescript/no-explicit-any": "off",
+                "no-console": "off"
+            }
+        }
+    ],
+    "ignorePatterns": [
+        "node_modules/**",
+        "dist/**"
+    ]
+}
