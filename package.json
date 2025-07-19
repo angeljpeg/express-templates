@@ -9,7 +9,10 @@
     "start": "node dist/index.js",
     "lint": "biome lint .",
     "format": "biome format . --write",
-    "check": "biome check --write"
+    "check": "biome check --write",
+    "prisma:generate": "prisma generate --no-engine",
+    "prisma:push": "prisma db push",
+    "prisma:migrate": "prisma migrate reset"
   },
   "keywords": [],
   "author": "",
@@ -24,11 +27,13 @@
     "@biomejs/biome": "1.9.4",
     "@swc/cli": "^0.7.7",
     "@swc/core": "^1.11.31",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^22.15.30",
     "nodemon": "^3.1.10",
-    "oxlint": "^1.1.0",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
   }
 }
